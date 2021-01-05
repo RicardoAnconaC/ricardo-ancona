@@ -1,7 +1,7 @@
 #hola{
     width: 100vw;
     height: 100vh;
-    background-color: #252328;
+    background-color: #000925;
     position: fixed;
     z-index: 999;
 }
@@ -16,7 +16,7 @@
 
 #preloader span {
   position:absolute;
-  border: 8px solid #ffe066;
+  border: 8px solid #66f5ff;
   border-top: 8px solid transparent;
   border-radius:999px;
 }
@@ -49,20 +49,7 @@
 
 /* ====  Page layout ==== */
 
-.page-wrap{
-    overflow-x: hidden;
-    height: 100vh;
-}
-
-.home{
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home:before{
+#home:before{
   position: absolute;
   width: 50%;
   height: 100%;
@@ -70,10 +57,10 @@
   top: 0;
   left: 0;
   content: '';
-  background-color: #F2F6F2;
+  background-color: #66f5ff;
 }
 
-.home:after{
+#home:after{
   position: absolute;
   width: 50%;
   height: 100%;
@@ -81,20 +68,25 @@
   top: 0;
   right: 0;
   content: '';
-  background-color: #F2F6F2;
+  background-color: #66f5ff;
+}
+
+#home.divide:before{
+  transition: all .6s .2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  width: 0;
+}
+
+#home.divide:after{
+  transition: all .6s .2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  width: 0;
+}
+
+.page-wrap{
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 /* .animate-border{
   border: 40px solid #EDEBE6;
   transition: border .5s .2s ease;
 } */
-
-.home.divide:before{
-  transition: all .6s .2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  width: 0;
-}
-
-.home.divide:after{
-  transition: all .6s .2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  width: 0;
-}
