@@ -21,9 +21,9 @@
 
   <!-- Start content -->
   <div class="page-wrap">
-    <div class="home bg-blue-500">
+    <div id="home" class="h-screen relative flex flex-row items-center justify-center bg-blue-dark">
       <div class="text-wrap">
-        <h1 class="font-black text-7xl text-black text-center">I'M RICARDO ANCONA</h1>
+        <h1 class="font-bold text-6xl text-white text-center tracking-wider">I'M RICARDO ANCONA</h1>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
               easing: [0.7,0,0.3,1],
               complete: function(){
                 // $('.home').addClass('animate-border divide');
-                $('.home').addClass('divide');
+                $('#home').addClass('divide');
               }
             })
           }
