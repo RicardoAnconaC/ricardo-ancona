@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricardo Ancona</title>
+  <link rel="stylesheet" href="./assets/styles/preloader.css">
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+</head>
+<body class="bg-gray-900">
+  <!-- Page preloader -->
+  <div id="hola">
+    <div id="preloader">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Start content -->
+  <div class="page-wrap">
+    <div class="bg-yellow-500 home">
+      <div class="text-wrap">
+        <h1 class="font-black text-7xl text-black text-center">I'M RICARDO ANCONA</h1>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(window).load(function(){
+      setTimeout(function(){
+        $('#preloader').velocity({
+          opacity : 0.1,
+          translateY: "-80px"
+        }, {
+          duration: 400,
+          complete: function(){
+            $('#hola').velocity({
+              translateY : "-100%"
+            }, {
+              duration: 1000,
+              easing: [0.7,0,0.3,1],
+              complete: function(){
+                // $('.home').addClass('animate-border divide');
+                $('.home').addClass('divide');
+              }
+            })
+          }
+        })
+      }, 1000)
+    })
+  </script>
+
+</body>
+</html>
