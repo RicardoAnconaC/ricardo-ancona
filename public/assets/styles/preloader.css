@@ -57,7 +57,6 @@
 .home{
   height: 100vh;
   position: relative;
-  background-color: #F2F6F2;
   display: flex;
   justify-content: center;
   align-items: center;
